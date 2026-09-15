@@ -1,0 +1,58 @@
+ORGAN TRANSPLANT MATCHING SYSTEM
+=======================================================
+
+QUERY 1: Eligibility status of Donor D1
+
+Donor ID: D1 | Name: Rajesh Kumar | Blood Type: O+ | Age: 34
+Inferred Status: Eligible Donor
+
+QUERY 2: Match and transport plan for Organ O1 (Kidney)
+
+Organ ID: O1 | Type: Kidney | Donor: D1
+Remaining Viability: 22 hours
+Organ Status: Viable - Standard Handling
+Best Match: P1 - Anita Sharma (Critical Priority, Long-Term Waitlist - Priority Boost)
+Transport Recommendation: Ground Transport Sufficient (~1.0 hrs)
+
+QUERY 3: Match and transport plan for Organ O3 (Heart)
+
+Organ ID: O3 | Type: Heart | Donor: D2
+Remaining Viability: 1 hours
+Organ Status: Near Expiry - Urgent Transport Required
+Best Match: P3 - Meera Iyer (Critical Priority, Immediate Transplant Required)
+Transport Recommendation: In-House Transfer - No Transport Required
+
+QUERY 4: Match attempt for Organ O4 (Expired Cornea)
+
+Organ ID: O4 | Type: Cornea | Donor: D2
+Remaining Viability: -4 hours
+Organ Status: Expired
+Result: Organ discarded - not viable for transplant.
+
+QUERY 5: Surgical readiness of Hospital C
+
+Hospital ID: H3 | Name: Hospital C | Surgeons Available: 1
+Inferred Status: Low Surgical Capacity - Schedule With Caution
+
+=======================================================
+KNOWLEDGE RESOLUTION - ORGAN TRANSPLANT MATCHING SYSTEM
+=======================================================
+
+Goal to prove: match(O1,P1)
+
+Initial Clauses:
+  C1: {'eligible_donor(D1)'}
+  C2: {'viable(O1)'}
+  C3: {'compatible(O1,P1)'}
+  C4: {'critical_priority(P1)'}
+  C5: {'~eligible_donor(D1)', '~viable(O1)', '~compatible(O1,P1)', '~critical_priority(P1)', 'match(O1,P1)'}
+  C6: {'~match(O1,P1)'}
+
+Step 1: Resolved {'eligible_donor(D1)'} with C5 --> {'~viable(O1)', '~compatible(O1,P1)', '~critical_priority(P1)', 'match(O1,P1)'}
+Step 2: Resolved {'viable(O1)'} with above --> {'~compatible(O1,P1)', '~critical_priority(P1)', 'match(O1,P1)'}
+Step 3: Resolved {'compatible(O1,P1)'} with above --> {'~critical_priority(P1)', 'match(O1,P1)'}
+Step 4: Resolved {'critical_priority(P1)'} with above --> {'match(O1,P1)'}
+
+Step 5: Resolved {'match(O1,P1)'} with {'~match(O1,P1)'} --> EMPTY CLAUSE {}
+
+Contradiction found. Therefore, 'match(O1,P1)' is PROVEN TRUE.

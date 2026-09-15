@@ -1,0 +1,17 @@
+{
+    "H1": {
+        "name": "Hospital A",
+        "surgeons_available": 2,
+        "transplant_capacity": 5
+    },
+    "H2": {
+        "name": "Hospital B",
+        "surgeons_available": 0,
+        "transplant_capacity": 3
+    },
+    "H3": {
+        "name": "Hospital C",
+        "surgeons_available": 1,
+        "transplant_capacity": 6
+    }
+}

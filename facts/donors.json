@@ -1,0 +1,29 @@
+{
+    "D1": {
+        "name": "Rajesh Kumar",
+        "blood_type": "O+",
+        "age": 34,
+        "health_status": "Healthy",
+        "consent_status": "Confirmed",
+        "location": "Hospital A",
+        "organs_available": ["Kidney", "Liver"]
+    },
+    "D2": {
+        "name": "Sunita Verma",
+        "blood_type": "AB+",
+        "age": 62,
+        "health_status": "Healthy",
+        "consent_status": "Confirmed",
+        "location": "Hospital C",
+        "organs_available": ["Heart", "Cornea"]
+    },
+    "D3": {
+        "name": "Arjun Mehta",
+        "blood_type": "A-",
+        "age": 21,
+        "health_status": "Healthy",
+        "consent_status": "Pending",
+        "location": "Hospital B",
+        "organs_available": ["Kidney"]
+    }
+}

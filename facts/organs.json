@@ -1,0 +1,38 @@
+{
+    "O1": {
+        "type": "Kidney",
+        "donor_id": "D1",
+        "blood_type": "O+",
+        "harvested_hours_ago": 2,
+        "viability_hours": 24,
+        "condition": "Good",
+        "location": "Hospital A"
+    },
+    "O2": {
+        "type": "Liver",
+        "donor_id": "D1",
+        "blood_type": "O+",
+        "harvested_hours_ago": 9,
+        "viability_hours": 12,
+        "condition": "Good",
+        "location": "Hospital A"
+    },
+    "O3": {
+        "type": "Heart",
+        "donor_id": "D2",
+        "blood_type": "AB+",
+        "harvested_hours_ago": 5,
+        "viability_hours": 6,
+        "condition": "Good",
+        "location": "Hospital C"
+    },
+    "O4": {
+        "type": "Cornea",
+        "donor_id": "D2",
+        "blood_type": "AB+",
+        "harvested_hours_ago": 100,
+        "viability_hours": 96,
+        "condition": "Good",
+        "location": "Hospital C"
+    }
+}
